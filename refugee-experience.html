@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Refugee Experience - Art With Heart</title>
+  <meta name="description" content="Learn about the refugee experience and why accessible mental health resources matter for refugee children.">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="images/logo.png" type="image/png">
+  <style>
+    .refugee-section {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+    .refugee-title {
+      font-family: 'Lora', serif;
+      font-size: 2.5rem;
+      font-weight: 400;
+      color: #2c3e50;
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+    .refugee-intro {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .refugee-intro-text {
+      color: #555;
+      line-height: 1.8;
+    }
+    .refugee-intro-text p {
+      margin-bottom: 1.5rem;
+      text-align: left;
+    }
+    .refugee-intro-text ul {
+      list-style: none;
+      padding: 0;
+    }
+    .refugee-intro-text li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 1rem;
+      color: #555;
+    }
+    .refugee-intro-text li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: #555;
+      font-size: 1.2rem;
+    }
+    .refugee-intro-image img {
+      width: 100%;
+      border-radius: 8px;
+    }
+    .section-divider {
+      border: none;
+      border-top: 1px solid #ddd;
+      margin: 3rem 0;
+    }
+    .new-beginning {
+      text-align: center;
+      padding-top: 2rem;
+    }
+    .new-beginning h2 {
+      font-family: 'Lora', serif;
+      font-size: 2rem;
+      font-weight: 400;
+      color: #2c3e50;
+      margin-bottom: 2rem;
+    }
+    .new-beginning > p {
+      max-width: 800px;
+      margin: 0 auto 3rem;
+      color: #555;
+      line-height: 1.8;
+    }
+    .stress-section {
+      display: grid;
+      grid-template-columns: 1fr 1.5fr;
+      gap: 3rem;
+      align-items: start;
+      text-align: left;
+    }
+    .stress-image img {
+      width: 100%;
+      max-width: 350px;
+    }
+    .stress-list {
+      list-style: none;
+      padding: 0;
+    }
+    .stress-list li {
+      position: relative;
+      padding-left: 1.5rem;
+      margin-bottom: 1.5rem;
+      color: #555;
+      line-height: 1.7;
+    }
+    .stress-list li::before {
+      content: "›";
+      position: absolute;
+      left: 0;
+      color: #555;
+      font-size: 1.2rem;
+    }
+    .stress-list strong {
+      color: #2c3e50;
+    }
+    @media (max-width: 768px) {
+      .refugee-intro,
+      .stress-section {
+        grid-template-columns: 1fr;
+      }
+      .refugee-title {
+        font-size: 2rem;
+      }
+      .stress-image {
+        order: -1;
+        text-align: center;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="navbar">
+    <div class="nav-container">
+      <a href="index.html" class="logo">
+        <img src="images/logo.png" alt="Art With Heart Logo">
+        <span class="logo-text">Art With Heart</span>
+      </a>
+      <button class="mobile-menu-btn" onclick="toggleMenu()">☰</button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="activity-books.html">Activity Books</a></li>
+        <li><a href="refugee-experience.html" class="active">The Refugee Experience</a></li>
+        <li><a href="art-mental-health.html">Art x Mental Health</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-instagram">
+        <a href="https://www.instagram.com/art_with_heart_project/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="22" height="22" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg>
+        </a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Main Content -->
+  <section class="refugee-section">
+    <h1 class="refugee-title">The Refugee Journey and Experience</h1>
+
+    <div class="refugee-intro">
+      <div class="refugee-intro-text">
+        <p>A refugee is a person who is unable or unwilling to return to their country of nationality (or country of last habitual residence) because of persecution or a well-founded fear of persecution on account of race, religion, nationality, membership in a particular social group, or political opinion.</p>
+
+        <ul>
+          <li>In 2024, 100,034 refugees were resettled in the United States, representing the highest number in 30 years.</li>
+          <li>Individuals with an immigration court case who were ultimately granted relief (asylum) in 2023 had waited more than 1,364 days on average for that outcome.</li>
+        </ul>
+      </div>
+      <div class="refugee-intro-image">
+        <img src="images/Refugee Image 1.webp" alt="Refugee family illustration">
+      </div>
+    </div>
+
+    <hr class="section-divider">
+
+    <div class="new-beginning">
+      <h2>A New Beginning</h2>
+      <p>Many refugees are exposed to brutal or unjust conditions in their own country (war violence, lack of accessible education, lack of medical care, and more), and when they migrate, they are again exposed to new threats to their wellbeing known as "<strong>core stressors</strong>".</p>
+
+      <div class="stress-section">
+        <div class="stress-image">
+          <img src="images/Refugee Image2.webp" alt="Community and resettlement illustration">
+        </div>
+        <ul class="stress-list">
+          <li><strong>Traumatic Stress:</strong> Traumatic stress occurs when a person experiences or witnesses a deeply distressing or disturbing event, leading to emotional, psychological, or physical reactions that can persist over time.</li>
+          <li><strong>Resettlement Stress:</strong> Resettlement stress involves the difficulties immigrants face while adapting to a new country, including overcoming economic hardship, finding housing, securing employment, and ensuring education for their children.</li>
+          <li><strong>Acculturation Stress:</strong> The psychological strain that comes with trying to adapt to the culture of your new home and becoming exposed to long term resettlement effects such as cultural discrepencies, language barriers, discrimination, and identity conflict.</li>
+          <li><strong>Isolation Stress:</strong> Resulting in feelings of loneliness and social isolation due to cultural differences, loss of social support, family separation, and financial instability which lead to a decline in mental health and an increased anxiety.</li>
+        </ul>
+      </div>
+    </div>
+
+    <hr class="section-divider">
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <p>© <span id="year"></span> Art With Heart. A Girl Scout Gold Award Project by Safiya.</p>
+    <p style="margin-top: 0.5rem;">
+      <a href="https://www.instagram.com/art_with_heart_project/" target="_blank" rel="noopener">Follow on Instagram</a>
+    </p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById('navLinks').classList.toggle('active');
+    }
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
